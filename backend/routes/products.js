@@ -2,16 +2,9 @@ const router = require('express').Router()
 let Product = require('../models/product.model')
 
 
-// router.route('/').get((req, res) => {
-//     Product.find()
-//         .then(products => res.json(products))
-//         .catch(err => res.status(400).json('Error: ' + err))
-// })
-
-router.post('/', paginatedResults(Product), (req, res) => {
+router.route('/').get(paginatedResults(Product), (req, res) => {
     res.json(res.paginatedResults)
 })
-
 
 function paginatedResults(model) {
     return (async (req, res, next) => {
