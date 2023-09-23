@@ -9,7 +9,7 @@ function paginatedResults(model) {
         const results = {};
 
 
-        if (endIndex < model.length) {
+        if (endIndex < await model.countDocuments().exec()) {
             results.next = {
                 page: page + 1,
                 limit: limit
@@ -17,7 +17,7 @@ function paginatedResults(model) {
             }
         }
 
-
+        //'previous' isn't showing in api
         if (startIndex < 0) {
             results.previous = {
                 page: page - 1,
