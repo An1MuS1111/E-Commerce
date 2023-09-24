@@ -1,6 +1,6 @@
 const router = require('express').Router()
 let Product = require('../models/product.model')
-const { paginatedResults } = require('../pagination/paginatedResults')
+const { paginatedResults } = require('../middleware/paginatedResults')
 
 
 router.route('/').get(paginatedResults(Product), (req, res) => {
