@@ -18,12 +18,17 @@ function paginatedResults(model) {
         }
 
         //'previous' isn't showing in api
-        if (startIndex < 0) {
+        if (startIndex > 0) {
             results.previous = {
                 page: page - 1,
                 limit: limit
             }
         }
+
+
+
+
+
 
         try {
             results.result = await model.find().limit(limit).skip(startIndex).exec()
