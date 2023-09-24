@@ -17,7 +17,7 @@ function paginatedResults(model) {
             }
         }
 
-        //'previous' isn't showing in api
+
         if (startIndex > 0) {
             results.previous = {
                 page: page - 1,
