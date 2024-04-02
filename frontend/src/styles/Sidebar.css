@@ -1,0 +1,41 @@
+.sidebar {
+    border-right: 1px solid black;
+    padding-top: 10px;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.item {
+    position: relative;
+    cursor: pointer;
+}
+
+.item a {
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    line-height: 30px;
+}
+
+.sub-item {
+    margin-left: 20px;
+    border-left: 3px solid rgb(113, 113, 113);
+}
+
+.sub-item:hover {
+    border-left: 4px solid black;
+}
+
+.sidebar .sub-btn img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .sub-btn img.rotate {
+    transform: rotate(90deg);
+}

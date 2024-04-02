@@ -1,0 +1,10 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.display {
+    align-self: flex-end;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
