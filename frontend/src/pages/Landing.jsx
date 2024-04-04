@@ -1,14 +1,15 @@
 import '@styles/Landing.css'
-
+import Navbar from '@components/Navbar'
 import Card from '@components/Card'
 import Sidebar from '@components/Sidebar'
 
 
 const Landing = () => {
     return (<>
-        <div className='main'>
+        <Navbar />
+        <div className='main-a'>
             <Sidebar />
-            <div className='display'>
+            <div className='display-a'>
 
                 <Card />
                 <Card />
